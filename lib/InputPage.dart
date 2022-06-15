@@ -5,7 +5,6 @@ class InputPage extends StatefulWidget {
   @override
   _InputPageState createState() => _InputPageState();
 }
-
 class _InputPageState extends State<InputPage> {
   @override
   Widget build(BuildContext context) {
@@ -45,7 +44,11 @@ class _InputPageState extends State<InputPage> {
                 child: ReusableCard(colour: Color(0xFF3F4F5DFF),),
               ),
             ],
-          ))
+          )),
+        Container(
+          color: Color(0xFFEB155),
+          margin: EdgeInsets.all(15.0),
+        ),
         ],
       ),
     );
