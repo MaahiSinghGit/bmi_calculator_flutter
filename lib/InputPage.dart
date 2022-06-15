@@ -3,6 +3,7 @@ import 'ReusableCard.dart';
 
 const activecardcolor= Color(0xFF3F4F5DFF);
 const bottomcolor=Color(0xFFEB1555);
+
 class InputPage extends StatefulWidget {
   @override
   _InputPageState createState() => _InputPageState();
