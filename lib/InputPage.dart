@@ -17,7 +17,28 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
-  late gender selectgen;
+  Color malecardColor=inactivecardcolor;
+  Color femalecardColor=inactivecardcolor;
+  void updateCoor(gender selectgen){
+    if(selectgen==gender.Male){
+      if(malecardColor==inactivecardcolor){
+        malecardColor=activecardcolor;
+        femalecardColor=inactivecardcolor;
+      }
+      else{
+        malecardColor=inactivecardcolor;
+      }
+    }
+    if(selectgen==gender.Female){
+      if(femalecardColor==inactivecardcolor){
+        femalecardColor=activecardcolor;
+        malecardColor=inactivecardcolor;
+      }
+      else{
+        femalecardColor=inactivecardcolor;
+      }
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -35,11 +56,11 @@ class _InputPageState extends State<InputPage> {
                   child: GestureDetector(
                     onTap: (){
                       setState((){
-                        selectgen=gender.Male;
+                        updateCoor(gender.Male);
                       });
                     },
                     child: ReusableCard(
-                      colour: selectgen==gender.Male?activecardcolor:inactivecardcolor,
+                      colour: malecardColor,
                       cardChild: cardContent(icon: FontAwesomeIcons.mars, lable: 'MALE'),
                     ),
                   ),
@@ -48,11 +69,11 @@ class _InputPageState extends State<InputPage> {
                   child: GestureDetector(
                     onTap: (){
                       setState((){
-                        selectgen=gender.Female;
+                       updateCoor(gender.Female);
                       });
                     },
                     child: ReusableCard(
-                      colour: selectgen==gender.Female?activecardcolor:inactivecardcolor,
+                      colour: femalecardColor,
                       cardChild: cardContent(icon: FontAwesomeIcons.venus, lable: 'FEMALE'),
                     ),
                   ),
