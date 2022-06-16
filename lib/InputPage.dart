@@ -44,6 +44,7 @@ class _InputPageState extends State<InputPage> {
         title: Center(child: Text('Body Mass Index')),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Expanded(
             child: Row(
@@ -84,7 +85,19 @@ class _InputPageState extends State<InputPage> {
               Expanded(
                 child: ReusableCard(
                   colour: kActiveCardColor,
-                    cardChild: Text('HEIGHT', style: kLabelTextStyle,),
+                    cardChild: Column(
+                      children: [
+                        Text('HEIGHT', style: kLabelTextStyle,),
+                        Row(
+                          children: [
+                            Text(
+                                '180',
+                              style:kNumberStyle,
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
                 ),
               ),
             ],
