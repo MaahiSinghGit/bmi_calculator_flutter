@@ -19,7 +19,7 @@ class cardContent extends StatelessWidget {
         ),
         Text(
           lable,
-          style: labelTextStyle,
+          style: kLabelTextStyle,
         ),
       ],
     );

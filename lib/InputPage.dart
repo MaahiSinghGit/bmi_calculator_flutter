@@ -14,25 +14,25 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
-  Color malecardColor=inactivecardcolor;
-  Color femalecardColor=inactivecardcolor;
+  Color malecardColor=kInactiveCardColor;
+  Color femalecardColor=kInactiveCardColor;
   void updateCoor(gender selectgen){
     if(selectgen==gender.Male){
-      if(malecardColor==inactivecardcolor){
-        malecardColor=activecardcolor;
-        femalecardColor=inactivecardcolor;
+      if(malecardColor==kInactiveCardColor){
+        malecardColor=kActiveCardColor;
+        femalecardColor=kInactiveCardColor;
       }
       else{
-        malecardColor=inactivecardcolor;
+        malecardColor=kInactiveCardColor;
       }
     }
     if(selectgen==gender.Female){
-      if(femalecardColor==inactivecardcolor){
-        femalecardColor=activecardcolor;
-        malecardColor=inactivecardcolor;
+      if(femalecardColor==kInactiveCardColor){
+        femalecardColor=kActiveCardColor;
+        malecardColor=kInactiveCardColor;
       }
       else{
-        femalecardColor=inactivecardcolor;
+        femalecardColor=kInactiveCardColor;
       }
     }
   }
@@ -83,8 +83,8 @@ class _InputPageState extends State<InputPage> {
             children: [
               Expanded(
                 child: ReusableCard(
-                  colour: activecardcolor,
-                    cardChild: Text('HEIGHT', style: labelTextStyle,),
+                  colour: kActiveCardColor,
+                    cardChild: Text('HEIGHT', style: kLabelTextStyle,),
                 ),
               ),
             ],
@@ -94,20 +94,20 @@ class _InputPageState extends State<InputPage> {
             children: [
               Expanded(
                 child: ReusableCard(
-                  colour: activecardcolor,
+                  colour: kActiveCardColor,
                     cardChild: cardContent(icon: FontAwesomeIcons.venus, lable: 'FEMALE')
                 ),
               ),
               Expanded(
                 child: ReusableCard(
-                  colour: activecardcolor,
+                  colour: kActiveCardColor,
                     cardChild: cardContent(icon: FontAwesomeIcons.venus, lable: 'FEMALE')
                 ),
               ),
             ],
           )),
           Container(
-            color: bottomcolor,
+            color: kBottomColor,
             margin: EdgeInsets.only(top: 10.0),
             width: double.infinity,
             height: kBottomCotainerHeight,
