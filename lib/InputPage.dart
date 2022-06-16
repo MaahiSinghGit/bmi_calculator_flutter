@@ -110,7 +110,7 @@ class _InputPageState extends State<InputPage> {
             color: bottomcolor,
             margin: EdgeInsets.only(top: 10.0),
             width: double.infinity,
-            height: BottomCotainerHeight,
+            height: kBottomCotainerHeight,
           ),
         ],
       ),
