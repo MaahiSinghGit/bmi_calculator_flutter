@@ -2,10 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'icon_content.dart';
 import 'reusable_card.dart';
-
-const activecardcolor = Color(0xFF1D1E33);
-const bottomcolor = Color(0xFFEB1555);
-const inactivecardcolor= Color(0xFF111328);
+import 'Constant.dart';
 enum gender{
   Male,
   Female,
@@ -113,7 +110,7 @@ class _InputPageState extends State<InputPage> {
             color: bottomcolor,
             margin: EdgeInsets.only(top: 10.0),
             width: double.infinity,
-            height: 80.0,
+            height: BottomCotainerHeight,
           ),
         ],
       ),
