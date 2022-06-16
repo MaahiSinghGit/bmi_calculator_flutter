@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'icon_content.dart';
-import 'package:bmi_calculator_flutter/reusable_card.dart';
+import 'reusable_card.dart';
 
 const activecardcolor = Color(0xFF3F4F5DFF);
 const bottomcolor = Color(0xFFEB1555);
