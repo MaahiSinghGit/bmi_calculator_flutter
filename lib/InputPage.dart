@@ -14,6 +14,9 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
+  int height=180;
+  int weight=55;
+
   Color malecardColor=kInactiveCardColor;
   Color femalecardColor=kInactiveCardColor;
   void updateCoor(gender selectgen){
@@ -95,12 +98,24 @@ class _InputPageState extends State<InputPage> {
                           textBaseline: TextBaseline.alphabetic,
                           children: [
                             Text(
-                                '180',
+                                height.toString(),
                               style:kNumberStyle,
                             ),
                             Text(' cm',style: kLabelTextStyle,)
                           ],
-                        )
+                        ),
+                        Slider(value: height.toDouble(),
+                          min: 50.0,
+                          max: 300.0,
+                          activeColor: Color(0xFFEB1555),
+                          inactiveColor: Color(0xFF8D8E98),
+                          onChanged: (double newValue){
+                          setState((){
+                            height=newValue.round();
+                          });
+                          },
+
+                        ),
                       ],
                     ),
                 ),
@@ -113,7 +128,23 @@ class _InputPageState extends State<InputPage> {
               Expanded(
                 child: ReusableCard(
                   colour: kActiveCardColor,
-                    cardChild: cardContent(icon: FontAwesomeIcons.venus, lable: 'FEMALE')
+                    cardChild: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text('WEIGHT', style: kLabelTextStyle,),
+                        Text(weight.toString(),style: kNumberStyle,),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                           RoundIconButton(),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                           RoundIconButton(),
+                          ],
+                        ),
+                      ],
+                    ),
                 ),
               ),
               Expanded(
@@ -135,4 +166,20 @@ class _InputPageState extends State<InputPage> {
     );
   }
 }
+class RoundIconButton extends StatelessWidget {
+  const RoundIconButton({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return RawMaterialButton(
+      shape: CircleBorder(),
+      fillColor: Color(0xFF4C4F5E),
+      constraints: BoxConstraints.tightFor(
+        width: 56.0,
+        height: 56.0
+      ),
+    );
+  }
+}
+
 
