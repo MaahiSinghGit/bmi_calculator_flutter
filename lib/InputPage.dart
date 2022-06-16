@@ -15,6 +15,22 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
     Color malecarcolor=inactivecardcolor;
     Color femalecardcolor=inactivecardcolor;
+
+    void updateColor(int gender){
+      if(gender==1){
+        if(malecarcolor==inactivecardcolor){
+          malecarcolor=activecardcolor;
+        }
+        else{
+          malecarcolor=inactivecardcolor;
+        }
+      }
+      if(gender==2){
+        if(femalecardcolor==inactivecardcolor){
+          femalecardcolor=activecardcolor;
+        }
+      }
+    }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,15 +43,30 @@ class _InputPageState extends State<InputPage> {
             child: Row(
               children: [
                 Expanded(
-                  child: ReusableCard(
-                    colour: malecarcolor,
-                    cardChild: cardContent(icon: FontAwesomeIcons.mars, lable: 'MALE'),
+
+                  child: GestureDetector(
+                    onTap: (){
+                      setState((){
+                        updateColor(1);
+                      });
+                    },
+                    child: ReusableCard(
+                      colour: malecarcolor,
+                      cardChild: cardContent(icon: FontAwesomeIcons.mars, lable: 'MALE'),
+                    ),
                   ),
                 ),
                 Expanded(
-                  child: ReusableCard(
-                    colour: femalecardcolor,
-                    cardChild: cardContent(icon: FontAwesomeIcons.venus, lable: 'FEMALE'),
+                  child: GestureDetector(
+                    onTap: (){
+                      setState((){
+                        updateColor(2);
+                      });
+                    },
+                    child: ReusableCard(
+                      colour: femalecardcolor,
+                      cardChild: cardContent(icon: FontAwesomeIcons.venus, lable: 'FEMALE'),
+                    ),
                   ),
                 )
               ],
