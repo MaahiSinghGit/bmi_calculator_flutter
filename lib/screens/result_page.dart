@@ -2,10 +2,14 @@ import 'package:bmi_calculator_flutter/Components/reusable_card.dart';
 import 'package:bmi_calculator_flutter/Constant.dart';
 import 'package:bmi_calculator_flutter/Components/BottomButton.dart';
 import 'package:flutter/material.dart';
+import 'package:bmi_calculator_flutter/CalculatorBrain.dart';
 
 
 class ResultsPage extends StatelessWidget {
-  const ResultsPage({Key? key}) : super(key: key);
+  ResultsPage({ required this.bmiresult, required this.resulttext, required this.Inter});
+ final String bmiresult;
+ final String resulttext;
+ final String Inter;
 
   @override
   Widget build(BuildContext context) {
