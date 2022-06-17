@@ -1,6 +1,7 @@
 import 'package:bmi_calculator_flutter/reusable_card.dart';
 import 'package:flutter/material.dart';
 import 'Constant.dart';
+import 'InputPage.dart';
 
 class ResultsPage extends StatelessWidget {
   const ResultsPage({Key? key}) : super(key: key);
@@ -49,21 +50,17 @@ class ResultsPage extends StatelessWidget {
               ),
             ),
           ),
-          GestureDetector(
+          BottomButton(
             onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=> InputPage()));
+              Navigator.push(context,
+                MaterialPageRoute(builder: (context)=> ResultsPage(),
+              ),
+              );
             },
-            child: Container(
-              child: Center(child: Text('Re-CALCULATE', style:kLargeButtonStyle,)),
-              color: kBottomColor,
-              margin: EdgeInsets.only(top: 10.0),
-              padding: EdgeInsets.only(bottom: 15.0),
-              width: double.infinity,
-              height: kBottomCotainerHeight,
-            ),
+            BottomTitle: 'Re-CALCULATE',
           ),
         ],
       ),
     );
   }
-}
+
