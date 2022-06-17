@@ -41,10 +41,25 @@ class ResultsPage extends StatelessWidget {
                   ),
                   Text(
                     'Your BMI result is quite low, You Should ead more !',
+                    textAlign: TextAlign.center,
                     style:kBodyText,
+
                   ),
                 ],
               ),
+            ),
+          ),
+          GestureDetector(
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> InputPage()));
+            },
+            child: Container(
+              child: Center(child: Text('Re-CALCULATE', style:kLargeButtonStyle,)),
+              color: kBottomColor,
+              margin: EdgeInsets.only(top: 10.0),
+              padding: EdgeInsets.only(bottom: 15.0),
+              width: double.infinity,
+              height: kBottomCotainerHeight,
             ),
           ),
         ],
