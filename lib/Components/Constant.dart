@@ -1,4 +1,5 @@
-import 'package:bmi_calculator_flutter/icon_content.dart';
+
+import 'icon_content.dart';
 import 'package:flutter/material.dart';
 
 const kBottomCotainerHeight = 80.0;
