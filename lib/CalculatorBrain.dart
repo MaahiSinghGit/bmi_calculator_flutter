@@ -20,4 +20,13 @@ class CalculatorBrain{
       return 'UnderWeight';
     }
   }
+  String getInterPretation(){
+    if(_bmi>=25){
+      return 'Your BMI indicates that you are Overweight,Your calorie intake must be less than that required for your daily activities.';
+    } else if(_bmi>18.5){
+      return 'Your BMI indicates that your weight is Normal! Congratulations for maintaining an healthy weight!';
+    } else{
+      return 'Your BMI indicates that you are Under Weight for your height, Focus on muscle toning and resistance training exercises.';
+    }
+  }
  }
