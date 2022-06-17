@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Constant.dart';
+import '../Constant.dart';
 class cardContent extends StatelessWidget {
   cardContent({required this.icon,required this.lable});
   final IconData icon;

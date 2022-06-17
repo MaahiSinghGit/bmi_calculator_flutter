@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:bmi_calculator_flutter/Components/icon_content.dart';
 import 'package:bmi_calculator_flutter/Components/reusable_card.dart';
-import 'package:bmi_calculator_flutter/Components/Constant.dart';
+import 'package:bmi_calculator_flutter/Constant.dart';
 import 'package:bmi_calculator_flutter/Components/BottomButton.dart';
 import 'package:bmi_calculator_flutter/Components/RoundButton.dart';
 
