@@ -4,6 +4,8 @@ import 'icon_content.dart';
 import 'reusable_card.dart';
 import 'Constant.dart';
 import 'package:bmi_calculator_flutter/result_page.dart';
+import 'BottomButton.dart';
+import 'RoundButton.dart';
 enum gender{
   Male,
   Female,
@@ -228,50 +230,7 @@ class _InputPageState extends State<InputPage> {
   }
 }
 
-class BottomButton extends StatelessWidget {
-  BottomButton({required this.onTap,required this.BottomTitle } );
-  final Function onTap;
-  final String BottomTitle;
 
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () =>{
-        onTap()
-      },
-      child: Container(
-        child: Center(child: Text(BottomTitle, style:kLargeButtonStyle,)),
-        color: kBottomColor,
-        margin: EdgeInsets.only(top: 10.0),
-        padding: EdgeInsets.only(bottom: 15.0),
-        width: double.infinity,
-        height: kBottomCotainerHeight,
-      ),
-    );
-  }
-}
-class RoundIconButton extends StatelessWidget {
 
-  RoundIconButton ({required this.icon, required this.onPressed});
-  final IconData icon;
-  final Function onPressed;
-
-  @override
-  Widget build(BuildContext context) {
-    return RawMaterialButton(
-      elevation: 0.0,
-      child: Icon(icon),
-      constraints: BoxConstraints.tightFor(
-          width: 56.0,
-          height: 56.0
-      ),
-      shape: CircleBorder(),
-      fillColor: Color(0xFF4C4F5E),
-      onPressed: () => {
-      onPressed(),
-    },
-    );
-  }
-}
 
 
