@@ -20,6 +20,7 @@ class CalculatorBrain{
       return 'UnderWeight';
     }
   }
+
   String getInterPretation(){
     if(_bmi>=25){
       return 'Your BMI indicates that you are Overweight,Your calorie intake must be less than that required for your daily activities.';
