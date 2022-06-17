@@ -26,7 +26,7 @@ class CalculatorBrain{
     } else if(_bmi>18.5){
       return 'Your BMI indicates that your weight is Normal! Congratulations for maintaining an healthy weight!';
     } else{
-      return 'Your BMI indicates that you are Under Weight for your height, Focus on muscle toning and resistance training exercises.';
+      return 'Your BMI indicates that you are UnderWeight, Focus on muscle toning and resistance training exercises.';
     }
   }
  }
