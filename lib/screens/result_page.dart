@@ -19,8 +19,11 @@ class ResultsPage extends StatelessWidget {
         children: [
           Expanded(
             child: Container(
+              padding: EdgeInsets.all(15.0),
+              alignment: Alignment.bottomCenter,
               child: Text(
                 'Your Result',
+                textAlign: TextAlign.center,
                 style: kTitleTextStyle,
               ),
             ),
@@ -53,10 +56,7 @@ class ResultsPage extends StatelessWidget {
           ),
           BottomButton(
             onTap: () {
-              Navigator.push(context,
-                MaterialPageRoute(builder: (context) => ResultsPage(),
-                ),
-              );
+             Navigator.pop(context);
             },
             BottomTitle: 'Re-CALCULATE',
           ),
