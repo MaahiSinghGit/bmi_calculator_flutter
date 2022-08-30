@@ -3,6 +3,9 @@
 A new Flutter project.
 
 ## Getting Started
+## Preview:
+![screenshot 176](https://github.com/MaahiSinghGit/bmi_calculator_flutter/blob/master/1.jpeg)
+![screenshot 176](https://github.com/MaahiSinghGit/bmi_calculator_flutter/blob/master/2.jpeg)
 
 This project is a starting point for a Flutter application.
 
